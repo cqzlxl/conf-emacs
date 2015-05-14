@@ -23,8 +23,7 @@
                 ac-source-words-in-same-mode-buffers
                 ac-source-yasnippet))
 
-(setq c-default-style "linux"
-      c-basic-offset 4)
+(setq c-default-style "linux" c-basic-offset 4)
 (add-hook 'c-mode-common-hook
           (lambda ()
             (setq comment-start "//" comment-end "")
@@ -43,29 +42,16 @@
             (c-set-offset 'access-label '-)
             (setq indent-tabs-mode nil)))
 
+
 ;; Python
 (define-skeleton my-ske-python-template
   ""
   nil
   "##-*-coding: utf-8;-*-##"
   \n
-  \n
-  "import sys"
-  \n
-  \n
-  -
-  \n
-  "def main(args):"
-  \n
-  > "pass"
-  \n
-  \n
-  "if __name__ == '__main__':"
-  \n
-  > "main(sys.argv)"
-  \n)
+  -)
 ;; 需要先打开auto-insert-mode
-(define-auto-insert '("\\.py\\'" . "My Python template")
+(define-auto-insert '("\\.py$" . "Python encoding declaration header")
   'my-ske-python-template)
 
 (defadvice python-calculate-indentation (around outdent-closing-brackets)
@@ -85,20 +71,14 @@
         ad-do-it))))
 (ad-activate 'python-calculate-indentation)
 
-;; Pymacs
-;; (autoload 'pymacs-apply "pymacs")
-;; (autoload 'pymacs-call "pymacs")
-;; (autoload 'pymacs-eval "pymacs" nil t)
-;; (autoload 'pymacs-exec "pymacs" nil t)
-;; (autoload 'pymacs-load "pymacs" nil t)
-;; (autoload 'pymacs-autoload "pymacs")
-;; (pymacs-load "ropemacs" "rope-")
-;; (setq ropemacs-enable-autoimport t)
-
 
 ;; WEB development
 (require 'web-mode)
-(add-to-list 'auto-mode-alist '("\\.php$" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.ctp$" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.tpl$" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.jsp$" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.bsh$"  . shell-script-mode))
+(add-to-list 'auto-mode-alist '("\\.ctp$"  . web-mode))
+(add-to-list 'auto-mode-alist '("\\.hql$"  . sql-mode))
+(add-to-list 'auto-mode-alist '("\\.html$" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsp$"  . web-mode))
+(add-to-list 'auto-mode-alist '("\\.less$" . css-mode))
+(add-to-list 'auto-mode-alist '("\\.php$"  . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl$"  . web-mode))

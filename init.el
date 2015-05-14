@@ -5,11 +5,11 @@
     (throw 'load-conf-exception '("emacs2old" . t)))
 
 ;; 中文环境总是比较蛋疼
-(setenv "LANG" "zh_CN.GBK")
-(setenv "LC_ALL" "zh_CN.GBK")
-(set-language-environment "Chinese-GBK")
+(setenv "LANG" "zh_CN.UTF-8")
+(setenv "LC_ALL" "zh_CN.UTF-8")
+(set-language-environment "UTF-8")
 (set-locale-environment)
-(prefer-coding-system 'chinese-gbk-unix)
+(prefer-coding-system 'utf-8-unix)
 
 ;;
 ;; 好了，开始！
