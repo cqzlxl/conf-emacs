@@ -206,12 +206,12 @@
 
 ;; SMTP
 (setq user-full-name "Liu,Xiaolin"
-      user-mail-address "liuxiaolin@baidu.com"
+      user-mail-address "liuxiaolin@whu.edu.cn"
       mail-user-agent 'message-user-agent
       send-mail-function 'smtpmail-send-it
-      message-default-headers "BCC: liuxiaolin@baidu.com\n"
+      message-default-headers "BCC: liuxiaolin@whu.edu.cn\n"
       mail-signature "Sent from my GNU Emacs."
-      smtpmail-smtp-server "email.baidu.com"
+      smtpmail-smtp-server "smtp.whu.edu.cn"
       smtpmail-smtp-service 25)
 
 ;; Moves the point to the newly created window after splitting.
