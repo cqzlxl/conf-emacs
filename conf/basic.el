@@ -65,7 +65,7 @@
 (my-disable-all-modes
  '(
    ;; 不要工具栏
-   tool-bar-mode
+   ;; tool-bar-mode
    ;; 不要菜单栏
    menu-bar-mode))
 
