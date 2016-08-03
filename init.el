@@ -49,8 +49,14 @@
 (setq user-emacs-directory "~/.emacs.d/")
 (defvar CONF_PATH (concat user-emacs-directory "conf/"))
 (defvar PACKAGE_PATH (concat user-emacs-directory "packages/"))
+
+;; MS-Windows相关初始化
 (if (string-equal system-type "windows-nt")
-    (setq default-directory (expand-file-name "~")))
+    (progn
+      (setq default-directory (expand-file-name "~"))
+      (require 'server)
+      (unless (server-running-p)
+        (server-start))))
 
 ;; 将自己装的软件包加到load-path中
 (dolist (fentry (directory-files PACKAGE_PATH t))
