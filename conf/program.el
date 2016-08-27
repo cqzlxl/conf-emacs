@@ -82,3 +82,6 @@
 (add-to-list 'auto-mode-alist '("\\.less$" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.php$"  . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl$"  . web-mode))
+
+
+(require 'scala-mode)
