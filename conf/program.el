@@ -82,6 +82,7 @@
 (add-to-list 'auto-mode-alist '("\\.less$" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.php$"  . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl$"  . web-mode))
-
+(add-to-list 'auto-mode-alist '("\\.cmake" . cmake-mode))
+(add-to-list 'auto-mode-alist '("CMakeLists\\.txt" . cmake-mode))
 
 (require 'scala-mode)
