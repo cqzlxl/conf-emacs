@@ -77,6 +77,7 @@
 (add-to-list 'auto-mode-alist '("\\.bsh$"  . shell-script-mode))
 (add-to-list 'auto-mode-alist '("\\.ctp$"  . web-mode))
 (add-to-list 'auto-mode-alist '("\\.hql$"  . sql-mode))
+(add-to-list 'auto-mode-alist '("\\.g4$"   . antlr-mode))
 (add-to-list 'auto-mode-alist '("\\.html$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.jsp$"  . web-mode))
 (add-to-list 'auto-mode-alist '("\\.less$" . css-mode))
