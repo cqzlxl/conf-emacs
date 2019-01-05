@@ -1,28 +1,5 @@
 ;;-*-coding: utf-8;-*-;;
 
-;; YASnippets
-;; (require 'yasnippet)
-;; (yas-global-mode 1)
-
-;; Auto-Complete
-;; (require 'auto-complete-config)
-;; (add-to-list 'ac-dictionary-directories
-;;              (concat user-emacs-directory "ac-dict/"))
-;; (ac-config-default)
-;; (setq-default ac-sources
-;;               '(ac-source-abbrev
-;;                 ac-source-dictionary
-;;                 ac-source-features
-;;                 ac-source-filename
-;;                 ac-source-files-in-current-dir
-;;                 ac-source-functions
-;;                 ac-source-imenu
-;;                 ac-source-semantic
-;;                 ac-source-symbols
-;;                 ac-source-variables
-;;                 ac-source-words-in-same-mode-buffers
-;;                 ac-source-yasnippet))
-
 (setq c-default-style "linux" c-basic-offset 4)
 (add-hook 'c-mode-common-hook
           (lambda ()
@@ -47,7 +24,7 @@
 (define-skeleton my-ske-python-template
   ""
   nil
-  "##-*-coding: utf-8;-*-##"
+  "# -*-coding: utf-8;-*- #"
   \n
   -)
 ;; 需要先打开auto-insert-mode

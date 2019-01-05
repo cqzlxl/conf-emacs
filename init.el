@@ -15,13 +15,16 @@
 ;; 好了，开始！
 ;;
 
+(package-initialize)
+(elpy-enable)
+
 (defun my-set-conf (option-pair-list conf-method)
   (dolist (pair option-pair-list)
     (funcall conf-method (car pair) (nth 1 pair))))
 
 
 ;; 依次加载配置文件列表里的每一项
-(defun my-load-conf-file (flist &optional prefix &optional suffix)
+(defun my-load-conf-file (flist prefix suffix)
   (let ((the-prefix prefix)
         (the-suffix suffix))
     (if (not (stringp the-prefix))
